@@ -1,0 +1,185 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+}
+
+.wrapper{
+
+    width: 100%;
+    display: grid;
+    column-gap: 0.75rem; 
+    grid-template-areas: 
+    "glb-msg glb-msg glb-msg"
+    "navbar navbar navbar"
+    "hero hero hero"
+    "main-content  main-content side-links"
+    "main-content  main-content side-links"
+    "rcmdn rcmdn rcmdn"
+    ". subscription ."
+    "footer footer footer";
+}
+
+.glb-msg{
+    background: red;
+    padding: 10px;
+    grid-area: glb-msg;
+}
+
+.container{
+    width: 80%;
+    margin: auto;
+}
+
+.glb-msg > div{
+    display: flex;
+    justify-content: space-between;
+    color: white;
+}
+
+.nav-bar{
+    background:blue;
+    padding: 10px;
+    grid-area: navbar;
+}
+
+.nav-bar > div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.nav-items{
+    list-style-type: none;
+    display: flex;
+}
+
+.nav-items > li{
+    margin-left: 1rem;
+}
+
+.nav-items > li:hover{
+    background: peru;
+    cursor: pointer;
+}
+
+.hero{
+    background: url(./images/sunrise.jpg);
+    height: 500px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    grid-area: hero;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-items{
+    width: 40%;
+    background: black;
+    opacity: 0.5;
+    color: white;
+    text-align: center;
+}
+
+.main{
+    width: 70%;
+    grid-area: main-content;
+}
+
+
+.post-article{
+    display: flex;
+    gap: 1rem;
+    border: 1px solid grey;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: -5px 5px 15px 5px silver;
+    margin-right: 20px;
+}
+
+.art-img{
+    max-width: 200px;
+    margin-right: 20px;
+}
+
+.title{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.btn-container{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.btn{
+    background: red;
+    color: white;
+    border: none;
+    font-weight: bold;
+    padding: 5px 10px;
+}
+
+.sidelinks{
+    grid-area: side-links;
+}
+
+.country{
+    width: 40%;
+    background: lightgreen;
+    padding: 1rem;
+    margin-top: 5rem;
+}
+
+.year{
+    width: 40%;
+    background: lightyellow;
+    padding: 1rem;
+    margin-top: 3rem;
+}
+
+.recommendation{
+    background: lightgreen;
+    padding: 4rem 0;
+    grid-area: rcmdn;
+}
+
+.card-list{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: space-around;
+}
+
+.card{
+    width: 300px;
+    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: -5px 10px 10px 5px rgba(0, 0, 0, .3);
+    background-color: white;
+    padding-bottom: 2rem;
+    flex-grow: 1;
+}
+
+.card button{
+    width: 100%;
+    padding: 10px 0;
+    box-shadow: -5px 10px 10px 5px rgba(255, 0, 0, 0.286);
+    border-radius: 10px;
+}
+
+.subscription{
+    grid-area: subscription;
+}
+
+.footer{
+    background: black;
+    grid-area: footer;
+}
